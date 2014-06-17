@@ -1,4 +1,12 @@
 RubyWithSwagger::Application.routes.draw do
+  get "help/help"
+
+  get "help/status"
+
+  get "help/identify"
+
+  get "help/echo"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
