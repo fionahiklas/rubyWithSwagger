@@ -37,3 +37,4 @@ build/
 vendor/bundle
 db
 log
+public/api
