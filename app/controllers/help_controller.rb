@@ -38,7 +38,7 @@ class HelpController < ApplicationController
   swagger_api :echo do
     summary "Returns and echo of the given parameter to prove the service is alive"
     notes "This is just for testing and should probably be blocked in production"
-    param :query, :echoString, :string, :mandatory, "String to echo back"
+    param :query, :echoString, :string, :required, "String to echo back"
     response :echoString
     response :noEchoString
   end
