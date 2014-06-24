@@ -11,7 +11,7 @@ class HelpController < ApplicationController
   end
 
   def help
-	"No help yet"
+	render :json => { message: "No help yet" }, :status => 200
   end
 
   swagger_api :status do
@@ -22,7 +22,7 @@ class HelpController < ApplicationController
   end
 
   def status
-	"Seems to be working"
+	render :json => { message: "Seems to be working" }, :status => 200
   end
 
   swagger_api :identify do
@@ -32,7 +32,7 @@ class HelpController < ApplicationController
   end
 
   def identify
-	"It's me"
+	render :json => { message: "It's me" }, :status => 200
   end
 
   swagger_api :echo do
@@ -44,6 +44,7 @@ class HelpController < ApplicationController
   end
   
   def echo
-	params[:echoString]
+	echoString = params[:echoString]
+	render :json => { message: "Echo: #{echoString}" }, :status => 200
   end
 end
