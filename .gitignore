@@ -37,5 +37,5 @@ build/
 vendor/bundle
 db
 log
-public/api/v1
 
+public/*.json
